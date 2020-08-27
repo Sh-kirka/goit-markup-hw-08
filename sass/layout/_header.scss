@@ -1,0 +1,264 @@
+/* ХЕДЕР */
+.logo-header {
+  color: #000;
+  font-family: $secondary-font;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+.logo-web {
+  color: $accent-color;
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    position: relative;
+
+    &-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-top: 16px;
+      padding-bottom: 16px;
+    }
+  }
+  .menu-wrapper {
+    position: absolute;
+    z-index: 100;
+    top: 100%;
+    width: 100%;
+    right: 0;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-left: 140px;
+    padding-right: 140px;
+    text-align: center;
+
+    background: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
+      0px 1px 3px rgba(0, 0, 0, 0.16);
+
+    transform: translateY(-125%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &.is-open {
+      transform: translateY(0);
+    }
+  }
+
+  .nav-menu-button {
+    background-color: transparent;
+    border: none;
+
+    &.is-open {
+      .icon-cross-svg {
+        display: block;
+
+        &:hover {
+          fill: $accent-color;
+        }
+      }
+      .icon-menu-svg {
+        display: none;
+      }
+    }
+  }
+
+  .icon-cross-svg {
+    display: none;
+  }
+
+  .icon-menu-svg:hover {
+    fill: $accent-color;
+  }
+}
+
+.icon-cross-svg,
+.icon-menu-svg {
+  fill: #000;
+}
+@media screen and (min-width: 767px) {
+  .nav-menu-button {
+    display: none;
+  }
+  .header {
+    line-height: normal;
+
+    .container {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .logo-header {
+    margin-right: 81px;
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+  .menu-wrapper {
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .logo-header {
+    margin-right: 85px;
+    padding-top: 24px;
+    padding-bottom: 25px;
+    font-size: 26px;
+  }
+}
+/* ХЕДЕР-НАВИГАЦИЯ */
+
+.navigation-link {
+  position: relative;
+  display: inline-block;
+  color: $secondary-text-color;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.navigation-list-item {
+  .current {
+    color: $accent-color;
+  }
+}
+
+.navigation-link.current::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  display: block;
+  content: "";
+  width: 100%;
+  height: 4px;
+  background: #2196f3;
+  border-radius: 2px;
+}
+
+@media screen and (max-width: 767px) {
+  .navigation {
+    margin-bottom: 60px;
+  }
+
+  .navigation-list-item {
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+  .navigation-link {
+    padding-bottom: 8px;
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .navigation {
+    display: flex;
+    margin-right: 84px;
+  }
+
+  .navigation-list {
+    display: flex;
+
+    .navigation-link {
+      padding-top: 32px;
+      padding-bottom: 32px;
+    }
+  }
+
+  .navigation-list-item {
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .navigation {
+    margin-right: 305px;
+  }
+}
+
+/* ХЕДЕР-КОНТАКТЫ */
+.header-contacts {
+  .link {
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    color: $primary-text-color;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+  }
+}
+
+.header-list-svg {
+  margin-right: 10px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .header-contacts-address .link:hover &,
+  .header-contacts-address .link:focus & {
+    fill: $accent-color;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header-contacts-address {
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+  }
+  .header-contacts {
+    .link {
+      font-size: 18px;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header-contacts {
+    padding-top: 21px;
+    padding-bottom: 21px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .header-contacts {
+    .link {
+      font-size: 12px;
+    }
+    &-list {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header-contacts {
+    display: flex;
+    margin-left: auto;
+
+    &-address {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
+    }
+  }
+}

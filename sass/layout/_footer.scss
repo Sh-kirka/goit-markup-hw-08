@@ -1,0 +1,157 @@
+/* ФУТЕР */
+.footer {
+  background: #2f303a;
+  .title {
+    font-style: normal;
+    @include font(14px, 700, 1.14);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $primary-white-color;
+  }
+}
+
+.logo-footer {
+  color: $primary-white-color;
+  font-family: $secondary-font;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+}
+.footer-logo-address {
+  padding-top: 60px;
+}
+.footer-address-item {
+  font-style: normal;
+  @include font(14px, 400, 1.71);
+  letter-spacing: 0.03em;
+  color: $primary-white-color;
+  margin-top: 20px;
+}
+.footer-mail,
+.footer-tel {
+  font-style: normal;
+  @include font(14px, 500, 1.33);
+  letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 9px;
+}
+.footer-address-list {
+  padding-bottom: 60px;
+}
+.join {
+  .social-list {
+    margin-top: 20px;
+  }
+
+  .social-list-item-link {
+    @include flex-center(flex, center, center);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:focus,
+    &:hover {
+      background: $accent-color;
+    }
+  }
+  .social-list-item-link-svg {
+    width: 20px;
+    height: 20px;
+    fill: white;
+  }
+}
+.social-list-item-link:hover .social-list-item-link-svg,
+.social-list-item-link:focus .social-list-item-link-svg {
+  fill: white;
+}
+
+@media screen and (max-width: 1199px) {
+  .footer {
+    .container {
+      text-align: center;
+      padding-bottom: 60px;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+
+  .footer-form-subscribe {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .logo-footer {
+    font-size: 24px;
+  }
+
+  .join {
+    margin-bottom: 60px;
+
+    .social-list {
+      justify-content: center;
+    }
+  }
+
+  .footer-subscribe-wrapper {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    .container {
+      display: flex;
+      align-items: baseline;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer {
+    .container {
+      flex-wrap: wrap;
+      flex-direction: row;
+    }
+  }
+  .footer-logo-address {
+    flex-basis: 50%;
+  }
+
+  .join {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 50%;
+    justify-content: center;
+  }
+
+  .footer-subscribe-wrapper {
+    display: flex;
+    flex-basis: 100%;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-address-item {
+    margin-right: 69px;
+  }
+
+  .social-list {
+    margin-right: 94px;
+  }
+
+  .footer-subscribe-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .email {
+    width: 358px;
+    margin-right: 12px;
+  }
+}

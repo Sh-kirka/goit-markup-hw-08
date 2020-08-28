@@ -121,33 +121,25 @@
           <ul class="whatawedoing list">
             <li class="whatawedoing-item">
               <div class="background-text">
-                <img
-                  src="./images/main/desctop.jpg"
-                  alt="Картинка с десктопным приложением"
-                  width="370"
-                  height="294"
-                />
+               <img srcset="./images/main/desctop.jpg 1x,
+                           ./images/main/desctop@2x.jpg 2x" src="./images/main/desctop.jpg"
+                 alt="Картинка с десктопным приложением" width="370" height="294">
                 <p class="whatawedoing-title">Десктопные приложения</p>
               </div>
             </li>
             <li class="whatawedoing-item">
               <div class="background-text">
-                <img
-                  src="./images/main/mobile.jpg"
-                  alt="Картинка с мобильным приложением"
-                  width="370"
-                  height="294"
-                />
+              <img srcset="./images/main/mobile.jpg 1x,
+                           ./images/main/mobile@2x.jpg 2x" src="./images/main/mobile.jpg"
+                alt="Картинка с мобильным приложением" width="370" height="294">
                 <p class="whatawedoing-title">Мобильные приложения</p>
               </div>
             </li>
             <li class="whatawedoing-item">
               <div class="background-text">
-              <img
-                src="./images/main/design.jpg"
-                alt="Картинка про дизайнерские решения"
-                width="370"
-                height="294"/>
+              <img srcset="./images/main/design.jpg 1x,
+                           ./images/main/design@2x.jpg 2x" src="./images/main/design.jpg"
+                alt="Картинка про дизайнерские решения" width="370" height="294">
               <div class="background-text">
                 <p class="whatawedoing-title">Дизайнерские решения</p>
               </div>
@@ -156,17 +148,23 @@
         </div>
       </section>
 <!-- Наша команда -->
-      <section class="grey-section section">
+      <section class="grey-section">
         <div class="container">
           <h2 class="section-title">Наша команда</h2>
           <ul class="team-list list">
             <li class="team-list-item">
-              <img
-                src="./images/team/nikolay.jpg"
-                alt="фотография Николая Кучеренко"
-                width="270"
-                height="260"
-              />
+               <picture>
+                 <source srcset="./images/team/nikolay.jpg 1x,
+                           ./images/team/nikolay@2x.jpg 2x" media="(max-width: 767px)" />
+                
+                 <source srcset="./images/team/nikolay_tablet.jpg 1x,
+                           ./images/team/nikolay_tablet@2x.jpg 2x" media="(max-width: 1199px)" />
+                
+                 <source srcset="./images/team/nikolay_desk.jpg 1x,
+                           ./images/team/nikolay_desk@2x.jpg 2x" media="(min-width: 1200px)" />
+                
+                 <img src="./images/team/nikolay.jpg" alt="" />
+               </picture>
               <h3 class="name-title">Николай Кучеренко</h3>
               <p class="text-description" lang="en">Product Designer</p>
               <ul class="social-list list">
@@ -223,12 +221,18 @@
               </ul>
             </li>
             <li class="team-list-item">
-              <img
-                src="./images/team/olga.jpg"
-                alt="фотография Ольги Ивановой"
-                width="270"
-                height="260"
-              />
+          <picture>
+            <source srcset="./images/team/olga.jpg 1x,
+                      ./images/team/olga@2x.jpg 2x" media="(max-width: 767px)" />
+          
+            <source srcset="./images/team/olga_tablet.jpg 1x,
+                      ./images/team/olga_tablet@2x.jpg 2x" media="(max-width: 1199px)" />
+          
+            <source srcset="./images/team/olga_desk.jpg 1x,
+                      ./images/team/olga_desk@2x.jpg 2x" media="(min-width: 1200px)" />
+          
+            <img src="./images/team/olga.jpg" alt="" />
+          </picture>
               <h3 class="name-title">Ольга Иванова</h3>
               <p class="text-description" lang="en">Frontend Developer</p>
               <ul class="social-list list">
@@ -285,12 +289,18 @@
               </ul>
             </li>
             <li class="team-list-item">
-              <img
-                src="./images/team/andrey.jpg"
-                alt="фотография Андрея Шевченко"
-                width="270"
-                height="260"
-              />
+          <picture>
+            <source srcset="./images/team/andrey.jpg 1x,
+                                ./images/team/andrey@2x.jpg 2x" media="(max-width: 767px)" />
+          
+            <source srcset="./images/team/andrey_tablet.jpg 1x,
+                                ./images/team/andrey_tablet@2x.jpg 2x" media="(max-width: 1199px)" />
+          
+            <source srcset="./images/team/andrey_desk.jpg 1x,
+                                ./images/team/andrey_desk@2x.jpg 2x" media="(min-width: 1200px)" />
+          
+            <img src="./images/team/andrey.jpg" alt="" />
+          </picture>
               <h3 class="name-title">Андрей Шевченко</h3>
               <p class="text-description" lang="en">Marketing</p>
               <ul class="social-list list">
@@ -348,12 +358,18 @@
             </li>
 
             <li class="team-list-item">
-              <img
-                src="./images/team/ivan.jpg"
-                alt="фотография Ивана Николаева"
-                width="270"
-                height="260"
-              />
+          <picture>
+            <source srcset="./images/team/ivan.jpg 1x,
+                                          ./images/team/ivan@2x.jpg 2x" media="(max-width: 767px)" />
+          
+            <source srcset="./images/team/ivan_tablet.jpg 1x,
+                                          ./images/team/ivan_tablet@2x.jpg 2x" media="(max-width: 1199px)" />
+          
+            <source srcset="./images/team/ivan_desk.jpg 1x,
+                                          ./images/team/ivan_desk@2x.jpg 2x" media="(min-width: 1200px)" />
+          
+            <img src="./images/team/ivan.jpg" alt="" />
+          </picture>
               <h3 class="name-title">Иван Николаев</h3>
               <p class="text-description" lang="en">UI Designer</p>
               <ul class="social-list list">
@@ -413,7 +429,7 @@
         </div>
       </section>
 <!-- Постоянные клиенты -->
-      <section class="client-section section">
+      <section class="client-section">
         <div class="container">
           <h2 class="section-title">Постоянные клиенты</h2>
           <ul class="client-list list">

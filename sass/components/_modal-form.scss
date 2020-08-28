@@ -33,13 +33,6 @@
     margin: 0px;
     margin-bottom: 30px;
     color: $secondary-text-color;
-
-    @media (min-width: 600px) {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
   }
 }
 .modal-form-input-wrapper {
@@ -109,6 +102,7 @@
 }
 
 .modal-form-message-label {
+  font-weight: 400;
   position: absolute;
   top: 12px;
   left: 14px;
@@ -245,5 +239,30 @@
     width: 11px;
     height: 11px;
     fill: $secondary-text-color;
+  }
+}
+@media (min-width: 600px) {
+  .modal-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+@media screen and (max-width: 1199px) {
+  .modal-form {
+    width: 450px;
+    height: 609px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .form-input {
+    width: 370px;
+    height: 40px;
+  }
+
+  .modal-form-input text {
+    width: 370px;
+    height: 120px;
   }
 }

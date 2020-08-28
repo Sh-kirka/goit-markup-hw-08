@@ -135,15 +135,6 @@ img {
   color: #212121;
 }
 
-@media (min-width: 600px) {
-  .modal-form-title {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-}
-
 .modal-form-input-wrapper {
   position: relative;
   margin-bottom: 28px;
@@ -224,6 +215,7 @@ img {
 }
 
 .modal-form-message-label {
+  font-weight: 400;
   position: absolute;
   top: 12px;
   left: 14px;
@@ -382,6 +374,33 @@ img {
   width: 11px;
   height: 11px;
   fill: #212121;
+}
+
+@media (min-width: 600px) {
+  .modal-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .modal-form {
+    width: 450px;
+    height: 609px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .form-input {
+    width: 370px;
+    height: 40px;
+  }
+  .modal-form-input text {
+    width: 370px;
+    height: 120px;
+  }
 }
 
 .social-list {
@@ -1189,7 +1208,7 @@ img {
   .footer-address-item {
     margin-right: 69px;
   }
-  .social-list {
+  .join .social-list {
     margin-right: 94px;
   }
   .footer-subscribe-wrapper {
